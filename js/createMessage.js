@@ -1,5 +1,5 @@
 // One IIFE should contain a function that accepts an element id and the user message
-var slackish = (function(slackish) {
+var Slackish = (function(slackish) {
 // Each message should be stored in a private array in this IIFE.
 	let storedMessages = [];
 
@@ -25,9 +25,9 @@ var slackish = (function(slackish) {
 
 // and delete a single message.
 
-	return slackish;
+	return Slackish;
 
-})(slackish || {});
+})(Slackish || {});
 
 
 
