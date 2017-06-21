@@ -11,7 +11,7 @@ body {
 }
 
 .navColor{
-	background-color: #70CADB;
+	background-color: #3EB890;
 	color: #443642;
 	box-shadow: 5px 5px 20px -6px gray;
 }
@@ -25,7 +25,7 @@ body {
 
 .submitMessage {
 	color: #fff;
-	background-color: #3EB890;
+	background-color: #70CADB;
 	box-shadow: 5px 5px 10px -6px gray;
 }
 
