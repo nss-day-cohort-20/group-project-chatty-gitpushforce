@@ -34,7 +34,7 @@ body {
 }
 
 .navbar-form {
-	margin-top: 2%;
+	margin-top: 3%;
 	padding-right: 13%;
 	font-size: 0px;
 	text-align: center;
@@ -80,4 +80,10 @@ body {
 
 .hidden {
 	display: none;
+}
+
+.clearButton {
+	margin-top: -8px;
+	margin-left: 5%;
+	color: #fff;
 }
