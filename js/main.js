@@ -1,10 +1,16 @@
-function toggleNightMode(){
-    let classesToChange = document.getElementsByClassName("messageBox")
-    for (var i = 0; i < classesToChange.length; i++) {
-        classesToChange[i]
+function toggleNightMode(elementsOfClass){
+    for (var i = 0; i < elementsOfClass.length; i++) {
+        elementsOfClass[i].classList.toggle("nightMode");
     }
-    .classList.toggle("nightMode");
-    // messageBox, messageHeader, navColor, body
+}
+
+function changeTheme(){
+    let classesToChange = ["messageBox", "messageHeader", "navColor", "body", "submitMessage", ];
+
+    classesToChange.forEach(function(classToChange){
+        let elementsOfClass = document.getElementsByClasses(classToChange);
+        toggleNightMode(elementsOfClass);
+    })
 }
 
 document.getElementById("userMessageInput").addEventListener("keydown", function(){
