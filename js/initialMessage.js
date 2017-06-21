@@ -14,7 +14,7 @@ var Slackish = (function(oldSlackish){
         // creating, listening for, opening and sending ann XHR request
         var messageReader = new XMLHttpRequest();
         messageReader.addEventListener("load", setInitialMessages);
-        messageReader.open("GET", "initialMessages.json");
+        messageReader.open("GET", "js/initialMessages.json");
         messageReader.send();
     }())
 
