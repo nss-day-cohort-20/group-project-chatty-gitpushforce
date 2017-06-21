@@ -32,6 +32,7 @@ body {
 .navShadow {
 	box-shadow: 5px 5px 20px -6px gray;
 }
+
 .navbar-form {
 	margin-top: 2%;
 	padding-right: 13%;
@@ -59,6 +60,8 @@ body {
 	border-bottom: 2px solid #E01765;
 	padding-bottom: 1%;
 	background-color: rgba(225,225,225,.9);
+	border-radius: 10px;
+	margin-bottom: 2%;
 }
 
 .messageHeader  h1 {
