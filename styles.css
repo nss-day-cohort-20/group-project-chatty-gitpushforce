@@ -56,13 +56,14 @@ body {
 	margin: 0 auto;
 	text-align: center;
 	max-width: 50%;
-	border-bottom: 1px solid #E8A723;
+	border-bottom: 2px solid #E01765;
 	padding-bottom: 1%;
-	background-color: rgba(128,128,128, .1);
+	background-color: rgba(32, 32, 32, .1);
 }
+
 .messageHeader  h1 {
-	color: #70CADB;
-	font-weight: 100;
+	color: #443642;
+	font-weight: 300;
 	font-size: 2rem;
 }
 
