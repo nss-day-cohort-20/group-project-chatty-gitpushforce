@@ -1,0 +1,56 @@
+
+.navbar-form .form-control {
+	display: inline-block;
+	width: 500px;
+	vertical-align: middle;
+	box-shadow: 5px 5px 20px -6px gray;
+}
+
+.navColor{
+	background-color: #70CADB;
+	color: #443642;
+	box-shadow: 5px 5px 20px -6px gray;
+}
+
+#submitMessage {
+	margin: 0 auto;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-left: 0px;
+}
+
+.submitMessage {
+	color: #fff;
+	background-color: #3EB890;
+	box-shadow: 5px 5px 20px -6px gray;
+}
+
+.navbar-form {
+	margin-top: 2%;
+	padding-right: 10%;
+	font-size: 0px;
+	text-align: center;
+	vertical-align: middle;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.ghost {
+	margin-top: 110px;
+}
+
+.radio {
+	padding-left: 8%;
+	float: right;
+}
+
+.messageBox {
+	border: 1px dashed #ddd;
+	box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
+	min-height: 600px;
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
