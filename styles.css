@@ -87,3 +87,8 @@ body {
 	margin-left: 5%;
 	color: #fff;
 }
+
+.messageCard {
+	border 1px solid white;
+	color: white;
+}
