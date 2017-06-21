@@ -1,0 +1,9 @@
+{
+    "messages":[
+        {"text":"Hello and welcome to Slackish!"},
+        {"text":"Use Slacksih to communicate with friends!"},
+        {"text":"Just go to the message field, type out a message and hit enter!"},
+        {"text":"Alternatively we also offer a Big Text and Dark Theme options"},
+        {"text":"Monkeychicken"}
+    ]
+}

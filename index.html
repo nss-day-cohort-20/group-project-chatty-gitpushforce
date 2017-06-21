@@ -20,6 +20,21 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="#"><img src="/img/slack-ish.png"></a>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid navColor">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/slack-ish.png"></a>
+			</div>
+			<form class="navbar-form">
+				<div class="form-group" id="submitMessage">
+					<input type="text" class="form-control" placeholder="Write a message!">
 				</div>
 				<div class="navbar-form">
 					<div class="form-group" id="submitMessage">
@@ -50,20 +65,11 @@
 			<div class="messageHeader">
 				<h1>Messages</h1>
 			</div>
-			<div id="messageContainer">
-				<div class="messageCard" id="messageCard">
-					<h3>Hello! This is a message</h3>
-					<span><button type="button" class="btn btn-primary" id="deleteMessage">Delete</button></span>
-				</div>
-
-			<div class="messageCard" id="messageCard2">
-				<h3>Hello! This is  also a message</h3>
-				<span><button type="button" class="btn btn-primary" id="deleteMessage" >Delete</button></span>
-			</div>
 		</div>
-		<script src="/js/initialMessage.js"></script>
-		<script src="/js/createMessage.js"></script>
-		<script src="/js/deleteMessage.js"></script>
-		<script src="/js/main.js"></script>
+		<div id="message-creator"></div>
+		<script src="initialMessage.js"></script>
+		<script src="createMessage.js"></script>
+		<script src="deleteMessage.js"></script>
+		<script src="main.js"></script>
 	</body>
 	</html>
