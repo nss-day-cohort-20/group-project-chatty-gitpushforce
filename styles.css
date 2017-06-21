@@ -16,6 +16,12 @@ body {
 	box-shadow: 5px 5px 20px -6px gray;
 }
 
+.nightMode .navColor{
+	background-color: #443642; !important
+	color: #3EB890; !important
+	box-shadow: 5px 5px 20px -6px gray;
+}
+
 #submitMessage {
 	margin: 0 auto;
 	border-top-left-radius: 0px;
@@ -52,7 +58,7 @@ body {
 	float: right;
 }
 
-.messageHeader {
+.nightmode .messageHeader {
 	padding-top: 1%;
 	margin: 0 auto;
 	text-align: center;
@@ -60,9 +66,20 @@ body {
 	border-bottom: 2px solid #E01765;
 	padding-bottom: 1%;
 	background-color: rgba(225,225,225,.9);
-	border-radius: 10px;
 	margin-bottom: 2%;
 }
+.messageHeader {
+	padding-top: 1%;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 50%;
+	border-bottom: 2px solid #E01765;
+	padding-bottom: 1%;
+	background-color: rgba(255,255,255,.9);
+	margin-bottom: 2%;
+}
+
+
 
 .messageHeader  h1 {
 	color: #443642;
@@ -71,6 +88,14 @@ body {
 }
 
 .messageBox {
+	border: 1px dashed #E01765;
+	box-shadow: 0 0 0 3px #fff, 0 0 0 5px #443642, 0 0 0 10px #fff, 0 0 2px 10px #eee;
+	min-height: 600px;
+	text-align: center;
+	background-color: rgba(255,255,255, .4);
+}
+
+.nightMode .messageBox {
 	border: 1px dashed #E01765;
 	box-shadow: 0 0 0 3px #fff, 0 0 0 5px #443642, 0 0 0 10px #fff, 0 0 2px 10px #eee;
 	min-height: 600px;
@@ -92,3 +117,4 @@ body {
 	border 1px solid white;
 	color: white;
 }
+
