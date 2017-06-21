@@ -1,9 +1,9 @@
 // One IIFE should contain a function that accepts an element id and the user message
-var slackish = (function(elementId, userMessage) {
+var slackish = (function(slackish) {
 // Each message should be stored in a private array in this IIFE.
 	let storedMessages = [];
 
-	function createMessage(userMessage) {
+	slackish.createMessage = function(userMessage) {
 		storedMessages += userMessage;
 	//add the user's message -
 		let textBox = document.createElement("span");
@@ -11,11 +11,11 @@ var slackish = (function(elementId, userMessage) {
 		textBox.appendChild(messageText); //textBox = <span>userMessage</span>
 	//along with the delete button -
     let buttons = document.createElement("span");
-    deleteButton.className=""
     let deleteButton = document.createElement("button");
-    buttons.appendChild(deleteButton); //deleteButton = <span>Delete</span>
+    deleteButton.className=""
+    buttons.appendChild(deleteButton); //deleteButton = <span><button></button></span>
 	//add to the specified parent element -
-		let textCard = document.createElement("DIV");
+		let textCard = document.createElement("div");
 		textCard.appendChild(textBox);
 		textCard.appendChild(buttons);
 		document.getElementById("message-creator").appendChild(textCard);
@@ -25,4 +25,12 @@ var slackish = (function(elementId, userMessage) {
 
 // and delete a single message.
 
-})(slackish);
+	return slackish;
+
+})(slackish || {});
+
+
+
+
+
+
