@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
@@ -10,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+	<header>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid navColor">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -22,32 +22,34 @@
 				</button>
 				<a class="navbar-brand" href="#"><img src="img/slack-ish.png"></a>
 			</div>
-			<form class="navbar-form">
-				<div class="form-group" id="submitMessage">
-					<input type="text" class="form-control" placeholder="Write a message!">
+				<div class="navbar-form">
+					<div class="form-group" id="submitMessage">
+						<input type="text" class="form-control" placeholder="Write a message!">
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default hidden"></button>
+						<button type="button" class="btn btn-default hidden"></button>
+						<button type="button" class="btn submitMessage">Submit <span class="glyphicon glyphicon-send"></span></button>
+					</div>
+					<a class="navbar-brand navbar-right clearButton" href="#">Clear All</a>
 				</div>
-				<div class="btn-group">
-					<button type="button" class="btn btn-default hidden"></button>
-					<button type="button" class="btn btn-default hidden"></button>
-					<button type="button" class="btn submitMessage">Submit <span class="glyphicon glyphicon-send"></button>
-				</div>
-			</form>
-			<row>
-				<li class="radio col-md-8">
-					<label class="radio-inline">
-						<input type="checkbox">  Night Theme</label>
+				<row>
+					<li class="radio col-md-8">
 						<label class="radio-inline">
-							<input type="checkbox">  Large Text</label>
-						</li>
-					</row>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
+							<input type="checkbox">  Night Theme</label>
+							<label class="radio-inline">
+								<input type="checkbox">  Large Text</label>
+							</li>
+						</row>
+					</div>
+				</div>
+			</nav>
+		</header>
 		<div class="ghost">
 		</div>
 		<div class="container messageBox">
 			<div class="messageHeader">
-			<h1>Messages</h1>
+				<h1>Messages</h1>
 			</div>
 		</div>
 		<div id="message-creator"></div>
