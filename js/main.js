@@ -1,6 +1,3 @@
-function clearChatArea(){
-    document.getElementById("userMessageInput").value = "";
-}
 
 function toggleNightMode(elementsOfClass){
     for (var i = 0; i < elementsOfClass.length; i++) {
@@ -32,8 +29,11 @@ document.getElementById("userMessageInput").addEventListener("keydown", function
 document.getElementById("messageSubmitButton").addEventListener("click", function(){
     let messageText = document.getElementById("userMessageInput").value;
     Slackish.createMessage(messageText);
-    clearChatArea();
+    document.getElementById("userMessageInput").value = "";
 });
 
 document.getElementById("nightModeToggle").addEventListener("click", changeTheme);
-document.getElementById("clearButton").addEventListener("click", clearChatArea);
+document.getElementById("clearButton").addEventListener("click", function(){
+    let cardContainer = document.getElementById("message-creator");
+    cardContainer.innerHTML = "";
+});
