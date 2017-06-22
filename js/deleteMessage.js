@@ -1,3 +1,3 @@
 function deleteFromDom () {
-messageContainer.removeChild(event.target.parentNode.parentNode);
+cardContainer.removeChild(event.target.parentNode.parentNode);
 };
