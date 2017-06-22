@@ -6,7 +6,7 @@ function toggleClass(elementsOfClass, className){
 }
 
 function changeTextSize(){
-    let classesToChange = ["messageCard"];
+    let classesToChange = ["all"];
 
     classesToChange.forEach(function(classToChange){
         let elementsOfClass = document.getElementsByClassName(classToChange);
