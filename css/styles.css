@@ -1,7 +1,6 @@
 body {
 	font-family: 'Lato', sans-serif;
 	background-image: url(/img/pattern.jpg);
-	font-size: 4rem;
 }
 
  body.nightMode {
@@ -187,7 +186,7 @@ body {
 	font-size: 2rem;
 }
 
-.largeText {
+.largeText.messageBox {
 	font-size: 3rem;
 }
 
