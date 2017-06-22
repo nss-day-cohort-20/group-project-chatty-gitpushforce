@@ -3,6 +3,10 @@ var Slackish = (function(slackish) {
 // Each message should be stored in a private array in this IIFE.
 	let storedMessages = [];
 
+slackish.deleteFromDom = function deleteFromDom () {
+    document.getElementById("message-creator").removeChild(event.target.parentNode.parentNode);
+};
+
 	slackish.createMessage = function(userMessage) {
 		storedMessages.push(userMessage);
 	//add the user's message -
@@ -26,7 +30,7 @@ var Slackish = (function(slackish) {
 	// and delete a single message.
 		let deleteButtonClass = document.getElementsByClassName("delete-single-message")
 		for (var i = 0; i < deleteButtonClass.length; i++) {
-			deleteButtonClass[i].addEventListener("click", deleteFromDom);
+			deleteButtonClass[i].addEventListener("click", slackish.deleteFromDom);
 			deleteButtonClass[i].addEventListener("click", function(){
 				let textToDelete = event.target.parentNode.parentNode.children[0].innerText;
 				for (var i = 0; i < storedMessages.length; i++) {
