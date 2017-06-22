@@ -16,7 +16,7 @@ function changeTextSize(){
 }
 
 function changeTheme(){
-    let classesToChange = ["messageBox", "messageHeader", "navColor", "submitMessage", "messageCard", ];
+    let classesToChange = ["all"];
 
     classesToChange.forEach(function(classToChange){
         let elementsOfClass = document.getElementsByClassName(classToChange);
