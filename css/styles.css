@@ -193,19 +193,6 @@ body {
 }
 
 
-.nightMode .slackLogo{
-	background-image: url(/img/NightModeslack-ish.png);
-	height: 65px;
-	width: 167px;
-}
-
-.slackLogo {
-	background-image: url(/img/slack-ish.png);
-	height: 65px;
-	width: 167px;
-}
-
-
 .nightMode .pageBackground {
 	background-image: url(/img/NightModepattern.png);
 }
