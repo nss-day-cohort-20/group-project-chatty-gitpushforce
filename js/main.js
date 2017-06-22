@@ -1,8 +1,18 @@
 
-function toggleNightMode(elementsOfClass){
+function toggleClass(elementsOfClass, className){
     for (var i = 0; i < elementsOfClass.length; i++) {
-        elementsOfClass[i].classList.toggle("nightMode");
+        elementsOfClass[i].classList.toggle(className);
     }
+}
+
+function changeTextSize(){
+    let classesToChange = [];
+
+    classesToChange.forEach(function(classToChange){
+        let elementsOfClass = document.getElementsByClassName(classToChange);
+        // console.log(elementsOfClass);
+        toggleClass(elementsOfClass, "largeText");
+    })
 }
 
 function changeTheme(){
@@ -10,8 +20,8 @@ function changeTheme(){
 
     classesToChange.forEach(function(classToChange){
         let elementsOfClass = document.getElementsByClassName(classToChange);
-        console.log(elementsOfClass);
-        toggleNightMode(elementsOfClass);
+        // console.log(elementsOfClass);
+        toggleClass(elementsOfClass, "nightMode");
     })
 }
 
@@ -32,8 +42,10 @@ document.getElementById("messageSubmitButton").addEventListener("click", functio
     document.getElementById("userMessageInput").value = "";
 });
 
-document.getElementById("nightModeToggle").addEventListener("click", changeTheme);
 document.getElementById("clearButton").addEventListener("click", function(){
     let cardContainer = document.getElementById("message-creator");
     cardContainer.innerHTML = "";
 });
+
+document.getElementById("nightModeToggle").addEventListener("click", changeTheme);
+document.getElementById("largeTextToggle").addEventListener("click", changeTextSize);
