@@ -9,7 +9,7 @@ function toggleNightMode(elementsOfClass){
 }
 
 function changeTheme(){
-    let classesToChange = ["messageBox", "messageHeader", "navColor", "body", "submitMessage", ];
+    let classesToChange = ["messageBox", "messageHeader", "navColor", "body", "submitMessage","messageCard",  ];
 
     classesToChange.forEach(function(classToChange){
         let elementsOfClass = document.getElementsByClassName(classToChange);
@@ -36,4 +36,4 @@ document.getElementById("messageSubmitButton").addEventListener("click", functio
 });
 
 document.getElementById("nightModeToggle").addEventListener("click", changeTheme);
-document.getElementById("clearButton").addEventListener("click", clearChatArea;
+document.getElementById("clearButton").addEventListener("click", clearChatArea);
