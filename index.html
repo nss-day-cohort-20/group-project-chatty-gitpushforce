@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
 	<meta charset="utf-8">
 	<title>Slack-ish</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
-<body>
+<body class="">
 	<header>
 	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid navColor">
+		<div class="container-fluid navColor ">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -29,14 +31,14 @@
 					<div class="btn-group">
 						<button type="button" class="btn btn-default hidden"></button>
 						<button type="button" class="btn btn-default hidden"></button>
-						<button type="button" class="btn submitMessage">Submit <span class="glyphicon glyphicon-send"></span></button>
+						<button id="messageSubmitButton" type="button" class="btn submitMessage">Submit <span class="glyphicon glyphicon-send"></span></button>
 					</div>
-					<a class="navbar-brand navbar-right clearButton" href="#">Clear All</a>
+					<a class="navbar-brand navbar-right clearButton" id = "clearButton" href="#">Clear All</a>
 				</div>
 				<row>
 					<li class="radio col-md-8">
 						<label class="radio-inline">
-							<input type="checkbox">  Night Theme</label>
+							<input id="nightModeToggle" type="checkbox">  Night Theme</label>
 							<label class="radio-inline">
 								<input type="checkbox">  Large Text</label>
 							</li>
@@ -47,12 +49,12 @@
 		</header>
 		<div class="ghost">
 		</div>
-		<div class="container messageBox">
-			<div class="messageHeader">
+		<div class="container messageBox ">
+			<div class="messageHeader ">
 				<h1>Messages</h1>
-			</div>
-			<div id="message-creator"></div>
-		</div>
+				</div>
+				<div id="message-creator">
+				</div>
 		<script src="js/initialMessage.js"></script>
 		<script src="js/createMessage.js"></script>
 		<script src="js/deleteMessage.js"></script>

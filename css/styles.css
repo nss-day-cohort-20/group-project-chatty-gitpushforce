@@ -3,9 +3,15 @@ body {
 	background-image: url(/img/pattern.jpg);
 }
 
+body.nightMode{
+	font-family: 'Lato', sans-serif;
+	background-image: url(/img/NightModepattern.png);
+}
+
 .navbar-form .form-control {
 	display: inline-block;
 	width: 500px;
+	margin-left: 10%;
 	vertical-align: middle;
 	box-shadow: 5px 5px 20px -6px gray;
 }
@@ -16,17 +22,10 @@ body {
 	box-shadow: 5px 5px 20px -6px gray;
 }
 
-.nightMode .navColor{
-	background-color: #443642; !important
-	color: #3EB890; !important
+.navColor.nightMode {
+	background-color: #443642;
+	color: #3EB890;
 	box-shadow: 5px 5px 20px -6px gray;
-}
-
-#submitMessage {
-	margin: 0 auto;
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-left: 0px;
 }
 
 .submitMessage {
@@ -35,9 +34,22 @@ body {
 	box-shadow: 5px 5px 10px -6px gray;
 }
 
+.nightMode.submitMessage {
+	color: #fff;
+	background-color: #EBA823;
+	box-shadow: 5px 5px 10px -6px gray;
+}
+
+.submitMessage.nightMode {
+	color: #fff;
+	background-color: #E01765;
+	box-shadow: 5px 5px 10px -6px gray;
+}
+
 .navShadow {
 	box-shadow: 5px 5px 20px -6px gray;
 }
+
 
 .navbar-form {
 	margin-top: 3%;
@@ -58,7 +70,7 @@ body {
 	float: right;
 }
 
-.nightmode .messageHeader {
+.messageHeader.nightmode {
 	padding-top: 1%;
 	margin: 0 auto;
 	text-align: center;
@@ -68,6 +80,7 @@ body {
 	background-color: rgba(225,225,225,.9);
 	margin-bottom: 2%;
 }
+
 .messageHeader {
 	padding-top: 1%;
 	margin: 0 auto;
@@ -75,14 +88,17 @@ body {
 	max-width: 50%;
 	border-bottom: 2px solid #E01765;
 	padding-bottom: 1%;
-	background-color: rgba(255,255,255,.9);
-	margin-bottom: 2%;
 }
-
 
 
 .messageHeader  h1 {
 	color: #443642;
+	font-weight: 300;
+	font-size: 2rem;
+}
+
+.nightMode.messageHeader  h1 {
+	color: #3EB890;
 	font-weight: 300;
 	font-size: 2rem;
 }
@@ -95,12 +111,13 @@ body {
 	background-color: rgba(255,255,255, .4);
 }
 
-.nightMode .messageBox {
+.messageBox.nightMode{
 	border: 1px dashed #E01765;
 	box-shadow: 0 0 0 3px #fff, 0 0 0 5px #443642, 0 0 0 10px #fff, 0 0 2px 10px #eee;
 	min-height: 600px;
 	text-align: center;
-	background-color: rgba(0,0,0, .8);
+	background-color: rgba(0,0,0, .6);
+	color: white;
 }
 
 .hidden {
@@ -115,6 +132,75 @@ body {
 
 .messageCard {
 	border 1px solid white;
+}
+
+.messageCard {
+	background-image: url(/img/cardBG.png);
+	margin-top: 2%;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 75%;
+	border-bottom: 2px solid #70CADB;
+	padding-bottom: 2%;
+	padding-top: 2%;
+	color: #443642 ;
+	position: relative;
+}
+.nightMode.messageCard {
+	background-image: url(/img/nightModecardBG.png);
+	margin-top: 2%;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 75%;
+	border-bottom: 2px solid #70CADB;
+	padding-bottom: 2%;
+	padding-top: 2%;
+	color: rgba(225,225,225,1) ;
+	position: relative;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.deleteButton {
+	margin-bottom: 5%;
+	color: transparent;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.messageCard:hover .deleteButton {
+	color: #443642;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 2rem;
+}
+
+
+.nightMode.messageCard:hover .deleteButton {
+	color: #EBA823;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 2rem;
+}
+
+.largeText {
+	font-size: 3rem;
+}
+
+
+.navbar-default .navbar-brand {
 	color: white;
 }
+
+
+
+
+
+
+
+
+
 
