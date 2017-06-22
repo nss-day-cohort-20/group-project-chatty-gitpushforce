@@ -21,10 +21,11 @@ var Slackish = (function(oldSlackish){
     // update the initialMessagesArr with the contents of the JSON
     function setInitialMessages(){
         initialMessagesArr = JSON.parse(event.target.responseText).messages;
+        initialMessagesArr.forEach(function(message){Slackish.createMessage(message.text)});
     }
 
     // create a method to call the initialMessagesArray
-    initialMessage.getInitialMessages = function getInitialMessagesArr(){
+    initialMessage.getInitialMessages = function(){
         return initialMessagesArr
     }
 
