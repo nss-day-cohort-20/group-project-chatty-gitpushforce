@@ -6,7 +6,7 @@ function toggleClass(elementsOfClass, className){
 }
 
 function changeTextSize(){
-    let classesToChange = [];
+    let classesToChange = ["messageBox"];
 
     classesToChange.forEach(function(classToChange){
         let elementsOfClass = document.getElementsByClassName(classToChange);
@@ -16,12 +16,13 @@ function changeTextSize(){
 }
 
 function changeTheme(){
-    let classesToChange = ["messageBox", "messageHeader", "navColor", "body", "submitMessage","messageCard",  ];
+    let classesToChange = ["all"];
 
     classesToChange.forEach(function(classToChange){
         let elementsOfClass = document.getElementsByClassName(classToChange);
         // console.log(elementsOfClass);
         toggleClass(elementsOfClass, "nightMode");
+        document.querySelector('body').classList.toggle('nightMode');
     })
 }
 
