@@ -8,14 +8,14 @@ var Slackish = (function(slackish) {
 	//add the user's message -
 		let textBox = document.createElement("span");
 		let messageText = document.createTextNode(userMessage);
-		textBox.appendChild(messageText); //textBox = <span>userMessage</span>
+		textBox.appendChild(messageText);
 	//along with the delete button -
     let buttons = document.createElement("span");
     let deleteButton = document.createElement("button");
     let deleteText = document.createTextNode("Delete");
     deleteButton.className="delete-single-message"
     deleteButton.appendChild(deleteText);
-    buttons.appendChild(deleteButton); //buttons = <span><button>Delete</button></span>
+    buttons.appendChild(deleteButton);
 	//add to the specified parent element -
 		let textCard = document.createElement("div");
 		textCard.appendChild(textBox);
@@ -34,21 +34,16 @@ var Slackish = (function(slackish) {
 						break;
 					}
 				}
-			});
+			})
 		};
 	}
-
-	slackish.messagesGetter = function() {
-		console.log(storedMessages);
-	}
-
 // This IIFE should also expose a function to read all messages
+	slackish.messagesGetter = function() {
+		storedMessages.forEach(function(item, index) {
+			console.log(item);
+		})
+	};
 
 	return Slackish;
 
 })(Slackish || {});
-
-
-
-
-
