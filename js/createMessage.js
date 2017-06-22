@@ -12,23 +12,29 @@ var Slackish = (function(slackish) {
 	//along with the delete button -
     let buttons = document.createElement("span");
     let deleteButton = document.createElement("button");
-    deleteButton.className=""
-    buttons.appendChild(deleteButton); //deleteButton = <span><button></button></span>
+    let deleteText = document.createTextNode("Delete");
+    deleteButton.className="delete-single-message"
+    deleteButton.appendChild(deleteText);
+    buttons.appendChild(deleteButton); //buttons = <span><button>Delete</button></span>
 	//add to the specified parent element -
 		let textCard = document.createElement("div");
+		textCard.setAttribute("id", "cardContainer");
 		textCard.appendChild(textBox);
 		textCard.appendChild(buttons);
 		document.getElementById("message-creator").appendChild(textCard);
+	// and delete a single message.
+		let deleteButtonClass = document.getElementsByClassName("delete-single-message")
+		for (var i = 0; i < deleteButtonClass.length; i++) {
+			deleteButtonClass[i].addEventListener("click", deleteFromDom)
+		};
 	}
 
 // This IIFE should also expose a function to read all messages
 
-// and delete a single message.
 
 	return Slackish;
 
 })(Slackish || {});
-
 
 
 
