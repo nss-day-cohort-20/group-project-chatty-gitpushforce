@@ -183,8 +183,8 @@ body {
   border:none;
 }
 
-.largeText.messageBox {
-	font-size: 3rem;
+.largeText h3{
+	font-size: 5rem;
 }
 
 
@@ -193,7 +193,7 @@ body {
 }
 
 
-.nightMode.slackLogo{
+.nightMode .slackLogo{
 	background-image: url(/img/NightModeslack-ish.png);
 	height: 65px;
 	width: 167px;
