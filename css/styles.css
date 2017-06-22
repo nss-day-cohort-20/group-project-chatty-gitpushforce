@@ -1,9 +1,10 @@
 body {
 	font-family: 'Lato', sans-serif;
 	background-image: url(/img/pattern.jpg);
+	font-size: 4rem;
 }
 
-body.nightMode{
+ body.nightMode {
 	font-family: 'Lato', sans-serif;
 	background-image: url(/img/NightModepattern.png);
 }
@@ -196,10 +197,26 @@ body.nightMode{
 }
 
 
+.nightMode.slackLogo{
+	background-image: url(/img/NightModeslack-ish.png);
+	height: 65px;
+	width: 167px;
+}
 
+.slackLogo {
+	background-image: url(/img/slack-ish.png);
+	height: 65px;
+	width: 167px;
+}
 
+.pageBackground {
+	background-color: red;
+	/*background-image: url(/img/pattern.jpg);*/
+}
 
-
+.nightMode.pageBackground {
+	background-image: url(/img/NightModepattern.png);
+}
 
 
 
