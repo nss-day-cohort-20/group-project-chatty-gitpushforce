@@ -4,7 +4,7 @@ var Slackish = (function(slackish) {
 	let storedMessages = [];
 
 	slackish.createMessage = function(userMessage) {
-		storedMessages += userMessage;
+		storedMessages.push(userMessage);
 	//add the user's message -
 		let textBox = document.createElement("span");
 		let messageText = document.createTextNode(userMessage);
@@ -24,12 +24,25 @@ var Slackish = (function(slackish) {
 	// and delete a single message.
 		let deleteButtonClass = document.getElementsByClassName("delete-single-message")
 		for (var i = 0; i < deleteButtonClass.length; i++) {
-			deleteButtonClass[i].addEventListener("click", deleteFromDom)
+			deleteButtonClass[i].addEventListener("click", deleteFromDom);
+			deleteButtonClass[i].addEventListener("click", function(){
+				let textToDelete = event.target.parentNode.parentNode.children[0].innerText;
+				for (var i = 0; i < storedMessages.length; i++) {
+					if (textToDelete === storedMessages[i]) {
+						let indexToRemove = storedMessages.indexOf(storedMessages[i]);
+						storedMessages.splice(indexToRemove, 1);
+						break;
+					}
+				}
+			});
 		};
 	}
 
-// This IIFE should also expose a function to read all messages
+	slackish.messagesGetter = function() {
+		console.log(storedMessages);
+	}
 
+// This IIFE should also expose a function to read all messages
 
 	return Slackish;
 
