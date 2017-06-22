@@ -6,18 +6,20 @@ var Slackish = (function(slackish) {
 	slackish.createMessage = function(userMessage) {
 		storedMessages.push(userMessage);
 	//add the user's message -
-		let textBox = document.createElement("span");
+		let textBox = document.createElement("h3");
 		let messageText = document.createTextNode(userMessage);
 		textBox.appendChild(messageText); //textBox = <span>userMessage</span>
 	//along with the delete button -
     let buttons = document.createElement("span");
-    let deleteButton = document.createElement("button");
-    let deleteText = document.createTextNode("Delete");
-    deleteButton.className="delete-single-message"
+    let deleteButton = document.createElement("span");
+    let deleteText = document.createTextNode("");
+    deleteButton.className=("delete-single-message glyphicon glyphicon-remove");
+    // deleteButton.add.classList("glyphicon");
     deleteButton.appendChild(deleteText);
     buttons.appendChild(deleteButton); //buttons = <span><button>Delete</button></span>
 	//add to the specified parent element -
 		let textCard = document.createElement("div");
+		textCard.classList.add('messageCard');
 		textCard.appendChild(textBox);
 		textCard.appendChild(buttons);
 		document.getElementById("message-creator").appendChild(textCard);
