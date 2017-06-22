@@ -8,7 +8,7 @@ var Slackish = (function(slackish) {
 	//add the user's message -
 		let textBox = document.createElement("h3");
 		let messageText = document.createTextNode(userMessage);
-		textBox.appendChild(messageText); //textBox = <span>userMessage</span>
+		textBox.appendChild(messageText);
 	//along with the delete button -
     let buttons = document.createElement("span");
     let deleteButton = document.createElement("span");
@@ -16,7 +16,7 @@ var Slackish = (function(slackish) {
     deleteButton.className=("delete-single-message glyphicon glyphicon-remove");
     // deleteButton.add.classList("glyphicon");
     deleteButton.appendChild(deleteText);
-    buttons.appendChild(deleteButton); //buttons = <span><button>Delete</button></span>
+    buttons.appendChild(deleteButton);
 	//add to the specified parent element -
 		let textCard = document.createElement("div");
 		textCard.classList.add('messageCard');
@@ -36,21 +36,16 @@ var Slackish = (function(slackish) {
 						break;
 					}
 				}
-			});
+			})
 		};
 	}
-
-	slackish.messagesGetter = function() {
-		console.log(storedMessages);
-	}
-
 // This IIFE should also expose a function to read all messages
+	slackish.messagesGetter = function() {
+		storedMessages.forEach(function(item, index) {
+			console.log(item);
+		})
+	};
 
 	return Slackish;
 
 })(Slackish || {});
-
-
-
-
-
