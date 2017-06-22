@@ -24,8 +24,16 @@ slackish.deleteFromDom = function deleteFromDom () {
 	//add to the specified parent element -
 		let textCard = document.createElement("div");
 		textCard.classList.add('messageCard');
+		let messageDate = document.createElement("p");
+		textCard.appendChild(messageDate);
+
+		cardDate = new Date();
+		textCard.dateText = moment(cardDate).format('MMMM Do h:mma');
+		let dateText = document.createTextNode(textCard.dateText)
+		messageDate.className=("messageDate");
 		textCard.appendChild(textBox);
 		textCard.appendChild(buttons);
+		textCard.appendChild(dateText);
 		document.getElementById("message-creator").appendChild(textCard);
 	// and delete a single message.
 		let deleteButtonClass = document.getElementsByClassName("delete-single-message")
