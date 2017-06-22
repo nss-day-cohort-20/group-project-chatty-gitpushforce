@@ -18,7 +18,6 @@ var Slackish = (function(slackish) {
     buttons.appendChild(deleteButton); //buttons = <span><button>Delete</button></span>
 	//add to the specified parent element -
 		let textCard = document.createElement("div");
-		textCard.setAttribute("id", "cardContainer");
 		textCard.appendChild(textBox);
 		textCard.appendChild(buttons);
 		document.getElementById("message-creator").appendChild(textCard);
