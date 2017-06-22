@@ -13,7 +13,7 @@ var Slackish = (function(slackish) {
     let buttons = document.createElement("span");
     let deleteButton = document.createElement("button");
     let deleteText = document.createTextNode("Delete");
-    deleteButton.className="delete-single-message"
+    deleteButton.className = "delete-single-message"
     deleteButton.appendChild(deleteText);
     buttons.appendChild(deleteButton);
 	//add to the specified parent element -
