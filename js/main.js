@@ -46,7 +46,27 @@ document.getElementById("messageSubmitButton").addEventListener("click", functio
 document.getElementById("clearButton").addEventListener("click", function(){
     let cardContainer = document.getElementById("message-creator");
     cardContainer.innerHTML = "";
+    document.getElementsByClassName("clearButton")[0].setAttribute("disabled", true);
 });
 
 document.getElementById("nightModeToggle").addEventListener("click", changeTheme);
 document.getElementById("largeTextToggle").addEventListener("click", changeTextSize);
+(function() {
+  alert( "Handler for .click() called." );
+});
+
+function flipOut() {
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
